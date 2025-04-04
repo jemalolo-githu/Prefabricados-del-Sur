@@ -1,0 +1,430 @@
+:root {
+    --color-primary: #1B3659;
+    --color-secondary:#5A98BF;
+    --color-background: #A7CFF2;
+    --color-verdoso:#8C873A;
+    --color-amarilluzco:#F2B84B;
+    --color-white: #ffffff;
+    --font-main: Arial, sans-serif;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    background-color: var(--color-background);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.navegacion {
+    
+    background-color: var(--color-primary);
+    display: flex;
+   
+    flex-direction: column;
+    align-items:center;
+    
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:1rem;
+    transition: all 0.3s ease;
+}
+
+.navegacion a {
+    padding:0.1rem;
+    font-size:1.2rem;
+    color: var(--color-background);
+    text-decoration: none;
+    font-weight:bold;
+}
+
+.navegacion a:hover{
+    color: var(--color-secondary);
+    background-color: var(--white);
+}
+
+@media(min-width:1200px){
+    .navegacion {
+        flex-direction: row;
+        justify-content:space-around;
+       
+    }
+ }
+
+header { 
+    height: 50vh;
+    display:flex;
+    background-image: url("../img/prefabricados.jpg.webp");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position:center;
+}
+
+section h2 {
+    text-align:center;
+    margin-top:1rem;
+}
+
+section a{
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.contenedor-header {
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    width:100%;
+    height:100%;
+    
+}
+
+.texto-header {
+    margin-top:100px;
+    text-align: center;
+    align-items:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    color:var(--color-primary);
+    
+}
+.texto-header h3 {
+    background-color:var(--color-white);
+    font-size:2rem;
+    padding:10px;
+    border-radius:10px;
+}
+
+
+.latido {
+    display: inline-block;
+    font-size: 3rem; /* Tamaño del texto */
+    font-weight: bold;
+    color: var(--color-primary); /* Color del texto */
+    animation: latido 3s infinite; /* Llama a la animación 'latido' cada 1 segundo, de forma infinita */
+    transform-origin: center; /* Hace que el 'latido' ocurra desde el centro */
+  }
+  
+  @keyframes latido {
+    0% {
+      transform: scale(1); /* Tamaño original */
+    }
+    25% {
+      transform: scale(1.2); /* Aumenta el tamaño */
+    }
+    50% {
+      transform: scale(1); /* Vuelve al tamaño original */
+    }
+    75% {
+      transform: scale(1.2); /* Aumenta el tamaño nuevamente */
+    }
+    100% {
+      transform: scale(1); /* Vuelve al tamaño original */
+    }
+  }
+
+
+/* **** Productos ***** */
+
+.div-productos {
+    width: 100%;
+    display:flex;
+    /*flex-wrap: wrap;*/
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    gap:0.5rem;
+}
+
+
+
+@media(min-width:700px){
+    .div-productos {
+        flex-direction: row;
+        justify-content:space-around;
+       
+    }
+ 
+ }
+
+ h2-nuestros-productos {
+    display:flex;
+    text-align:center;
+    width:100%;
+    align-items:center;
+ }
+ 
+ .marco-producto {
+    margin:20px;
+    display:block;
+    border-radius: 30px;
+    background-color:var(--color-white);
+    padding:0;
+    overflow:hidden;
+    line-height: 1.6;
+    /*animation: fadeIn1 3s ease;*/
+
+    box-shadow: 10px 10px 5cap #323131;
+    width:100%;
+    max-width:400px;
+ }
+
+
+.marco-producto img {
+    width:100%;
+    height:auto;
+}
+
+.marco-producto h3 {
+    display:block;
+    font-weight: bold;
+    font-size:1.5rem;
+    color:var(--color-primary);
+    text-align:left;
+    padding-left:20px;
+    
+}
+
+.marco-producto p {
+    display:block;
+    font-size:1rem;
+    color:var(--color-primary);
+    text-align:left;
+    padding:20px;
+}
+.marco-producto:hover {
+    cursor:pointer;
+    /*background-color:red;*/
+
+    position: relative;
+    top:-20px;
+    /*left:10px;*/
+    /*animation: 1.5s ease 0s infinite beat;*/
+    
+   
+    transition: transform 0.3s ease;
+    transition-behavior: normal;
+    /*
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+   */
+}
+
+
+
+
+
+/* bancos de hormigón */
+
+.contenedor-bancos{
+    display:flex;
+    flex-direction: column;
+ }
+
+
+
+@media(min-width:700px){
+    .contenedor-bancos {
+        flex-direction: row;
+        justify-content:space-around;
+       
+    }
+ 
+ }
+
+
+
+ h2-nuestros-bancos {
+    display:flex;
+    text-align:center;
+    width:100%;
+    align-items:center;
+ }
+
+
+ 
+ .marco-banco {
+    margin:20px;
+    display:block;
+    border-radius: 15px;
+    background-color:var(--color-white);
+    padding:0;
+    overflow:hidden;
+    line-height: 0.5;
+    /*animation: fadeIn1 3s ease;*/
+
+    box-shadow: 10px 10px 5cap #323131;
+    width:50%;
+    max-width:200px;
+ }
+
+
+.marco-banco img {
+    width:100%;
+    height:100%;
+}
+
+.marco-banco h3 {
+    font-size:2rem;
+    
+}
+
+
+/* TUBOS y canalizaciones */
+
+.contenedor-tubos{
+    display:flex;
+    flex-direction: column;
+ }
+
+
+
+@media(min-width:700px){
+    .contenedor-tubos {
+        flex-direction: row;
+        justify-content:space-around;
+       
+    }
+ 
+ }
+
+
+
+ h2-nuestros-tubos {
+    display:flex;
+    text-align:center;
+    width:100%;
+    align-items:center;
+ }
+
+
+ 
+ .marco-tubo {
+    margin:20px;
+    display:block;
+    border-radius: 15px;
+    background-color:var(--color-white);
+    padding:0;
+    overflow:hidden;
+    line-height: 0.5;
+    /*animation: fadeIn1 3s ease;*/
+
+    box-shadow: 10px 10px 5cap #323131;
+    width:50%;
+    max-width:200px;
+ }
+
+
+.marco-tubo img {
+    width:100%;
+    height:100%;
+}
+
+
+
+
+/*  Contactar */
+
+.section-contactar {
+    background-color: var(--color-secondary);
+    color:var(--color-primary);
+    margin-top:80px;
+    padding:100px;
+    
+}
+
+.section-contactar h2 {
+    font-size:2.5rem;
+    text-align:center;
+}
+
+.formulario {
+    background-color: var(--dark);
+    width:95%;
+    max-width:800px;
+    margin:0 auto;
+    padding:1.4rem;
+    border-radius: 5px;
+}
+
+
+
+.container-input {
+    margin-bottom: 1rem;
+    font-size:2rem;
+}
+
+
+
+.container-input input,
+.container-input textarea {
+    width:100%;
+    padding:1rem;
+    border-radius: 10px;
+    border:none;
+    font-size:1.5rem;
+}
+
+input[type="submit"] {
+    width:100%;
+    border:none;
+    display:block;
+    background-color:var(--color-primary);
+    color:var(--color-white);
+    cursor:pointer;
+}
+
+input[type="submit"]:hover {
+    background-color:var(--color-secondary);
+    border:2px solid red;
+    transition:2s;
+}
+
+
+*/  FOOTER */
+
+footer p{
+    background-color:var(--color-primary);
+    color:var(--color-white);
+    width:100%;
+    margin:0 auto;
+    font-size:2rem;
+    text-align:center;
+    padding-top:20px;
+}
+
+.redes {
+    display:block;
+    background-color:var(--color-primary);
+    color:var(--color-white);
+    text-align: center;
+    padding: 1rem 0;
+    align-items: center;
+    font-size:3rem;
+}
+
+.redes img {
+    color:var(--white);
+    text-decoration: none;
+}
+
+.imgsvg {
+   width:50px;
+   height:50px;
+   color:var(--color-amarilluzco);
+}
+
+
+
