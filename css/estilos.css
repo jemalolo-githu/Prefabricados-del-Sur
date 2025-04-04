@@ -228,6 +228,8 @@ section a{
 
 /* bancos de hormigón */
 
+
+
 .contenedor-bancos{
     display:flex;
     flex-direction: column;
@@ -278,11 +280,15 @@ section a{
 
 .marco-banco h3 {
     font-size:2rem;
-    
 }
 
+.marco-banco:hover {
+    transform: scale(1.5);
+}
 
+/* **********************  */
 /* TUBOS y canalizaciones */
+/* ********************** */
 
 .contenedor-tubos{
     display:flex;
@@ -332,10 +338,71 @@ section a{
     height:100%;
 }
 
+.marco-tubo:hover {
+    transform: scale(2);
+}
+
+/* **************************** */
+/* Pasos y Túneles subterraneos */
+/* **************************** */
+
+.contenedor-pasos{
+    display:flex;
+    flex-direction: column;
+ }
 
 
 
+@media(min-width:700px){
+    .contenedor-pasos {
+        flex-direction: row;
+        justify-content:space-around;
+       
+    }
+ 
+ }
+
+
+
+ h2-nuestros-pasos {
+    display:flex;
+    text-align:center;
+    width:100%;
+    align-items:center;
+ }
+
+
+ 
+ .marco-paso {
+    margin:20px;
+    display:block;
+    border-radius: 15px;
+    background-color:var(--color-white);
+    padding:0;
+    overflow:hidden;
+    line-height: 0.5;
+    /*animation: fadeIn1 3s ease;*/
+
+    box-shadow: 10px 10px 5cap #323131;
+    width:50%;
+    max-width:200px;
+ }
+
+
+.marco-paso img {
+    width:100%;
+    height:100%;
+}
+
+.marco-paso:hover {
+    transform: scale(2);
+}
+
+
+
+/* ********** */
 /*  Contactar */
+/* ********** */
 
 .section-contactar {
     background-color: var(--color-secondary);
